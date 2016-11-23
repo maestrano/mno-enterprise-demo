@@ -18,6 +18,8 @@ Open http://localhost:7000/ in your browser
 
 * Generic mno-enterprise host project, generated using the [rails app template](https://github.com/maestrano/mno-enterprise/tree/master/rails-template)
 * [Custom fonts](https://github.com/maestrano/mno-enterprise#adding-a-custom-font)
+* Impac! KPIs
+* Impac! Dashboard printing
 
 ## Upgrading
 
