@@ -38,9 +38,11 @@ angular.module 'mnoEnterpriseAngular'
     exportUrl = -> "#{impacBase}/export/#{orgUid}/invoice_with_credit_note"
 
     vm.getInvoices = ->
+      invoicesUrl = exportUrl().concat('?', paramsString())
+      console.log("invoices url", invoicesUrl)
       promise = $http({
         method: 'GET',
-        url: exportUrl().concat('?', paramsString()),
+        url: invoicesUrl,
       }).then(
         (response) ->
           # Impac! may return errors in case of empty file
