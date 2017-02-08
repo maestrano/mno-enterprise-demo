@@ -32,7 +32,7 @@ MnoEnterprise.configure do |config|
 
   # Default sender for system generated emails
   config.default_sender_name = 'My Company'
-  config.default_sender_email = 'no-reply@example.com'
+  config.default_sender_email = ENV['default_sender_email'] || 'no-reply@example.com'
 
   #===============================================
   # External Routes
