@@ -4,7 +4,9 @@ gem 'rails', '~> 4.2.6'
 
 # Maestrano Enterprise Engine
 # Bundle edge Mnoe instead:
-gem 'mno-enterprise', git: 'https://github.com/maestrano/mno-enterprise'
+
+# TODO: remove ref - impac-angular#v1.5.0-rc2 requires master before renamed widget_category
+gem 'mno-enterprise', git: 'https://github.com/maestrano/mno-enterprise', ref: '130afff7cac0aa21fbf9692f3cdc450963a2a06a'
 # Use local mnoe
 # gem 'mno-enterprise', path: '../mno-enterprise'
 
