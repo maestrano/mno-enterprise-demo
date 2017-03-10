@@ -8,8 +8,8 @@
 
 "mno-enterprise-angular@git+https://git@github.com/xaun/mno-enterprise-angular.git#feature/transac-reconcile":
   version "0.0.0"
-  resolved "git+https://git@github.com/xaun/mno-enterprise-angular.git#2c58001fa68706d3089c9b89f8f8797e26441a73"
+  resolved "git+https://git@github.com/xaun/mno-enterprise-angular.git#e2a2460d9d23dd2292af9d4153408c17ddca2f48"
 
 "transac@git+https://git@github.com/xaun/transac.git#master":
   version "0.1.0"
-  resolved "git+https://git@github.com/xaun/transac.git#ccda873e4e9c693033e19ac2e3e5eb31d25ca57d"
+  resolved "git+https://git@github.com/xaun/transac.git#6878a246b51c2cff6d7a7b28d157f084dd229097"
