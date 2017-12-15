@@ -1,0 +1,6 @@
+language: ruby
+script:
+  - bundle install --quiet
+  - bundle exec rake
+rvm:
+  - 2.3.4

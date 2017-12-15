@@ -30,11 +30,11 @@ end
 # CI gems
 group :development do
   # Security audits
-  gem 'brakeman', require: false
+  gem 'brakeman', '~> 4.1.0', require: false
   gem 'bundler-audit', require: false
 
   # Style check
-  gem 'rubocop', '~> 0.39', require: false
+  gem 'rubocop', '~> 0.39.0', require: false
   gem 'rubocop-rspec', require: false
 end
 
