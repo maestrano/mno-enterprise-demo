@@ -360,7 +360,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  brakeman
+  brakeman (~> 4.1.0)
   bundler-audit
   factory_girl_rails
   figaro

@@ -30,7 +30,7 @@ end
 # CI gems
 group :development do
   # Security audits
-  gem 'brakeman', require: false
+  gem 'brakeman', '~> 4.1.0', require: false
   gem 'bundler-audit', require: false
 
   # Style check
