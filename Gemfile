@@ -23,6 +23,9 @@ gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
+# Background Jobs
+gem 'sucker_punch', '~> 2.0'
+
 # Ops gems
 group :sit, :uat, :production do
   gem 'newrelic_rpm'
@@ -36,7 +39,7 @@ group :development do
   gem 'bundler-audit', require: false
 
   # Style check
-  gem 'rubocop', '~> 0.39', require: false
+  gem 'rubocop', '~> 0.49.0', require: false
   gem 'rubocop-rspec', require: false
 end
 

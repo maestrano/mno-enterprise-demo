@@ -10,6 +10,8 @@ AllCops:
     - 'bin/**/*'
     - 'node_modules/**/*'
     - 'Guardfile'
+    - 'tmp/**/*'
+    - 'vendor/**/*'
 
 Rails:
   Enabled: true
@@ -39,5 +41,5 @@ Style/CollectionMethods:
   Enabled: true
 
 # Do not enforce Hash Style for now
-Style/SpaceInsideHashLiteralBraces:
+Layout/SpaceInsideHashLiteralBraces:
   Enabled: false

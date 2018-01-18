@@ -29,3 +29,6 @@ questions:
 marketplace:
   comparison:
     enabled: true
+admin_panel:
+  intercom:
+    enabled: true
