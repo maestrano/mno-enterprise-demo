@@ -2464,6 +2464,15 @@ form.editable-wrap .editable-controls input {
   }
 }
 
+#impac {
+  impac-dashboard.with-dock {
+    @media(min-width: @screen-md-min) {
+      display: block;
+      .top-buffer-4;
+    }
+  }
+}
+
 .dashboard-organization {
 
   //-----------------------------------
@@ -2629,15 +2638,6 @@ form.editable-wrap .editable-controls input {
 
 .team-member-add-modal table tr td:last-child {
   text-align: left;
-}
-
-#impac {
-  impac-dashboard.with-dock {
-    @media(min-width: @screen-md-min) {
-      display: block;
-      .top-buffer-4;
-    }
-  }
 }
 
 //-------------------------------

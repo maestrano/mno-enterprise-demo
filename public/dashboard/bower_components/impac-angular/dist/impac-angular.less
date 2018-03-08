@@ -74,6 +74,9 @@
 @impac-dashboard-source-color:                  @impac-dashboard-title-label-color;
 @impac-dashboard-buttons-border-radius:         4px;
 
+// Create
+@impac-dashboard-create-button-color:           @impac-dashboard-title-color;
+
 //Info-text
 @impac-dashboard-info-text-color:               white;
 @impac-dashboard-info-text-background-color:    rgba(23,38,45, 0.7);
@@ -1739,7 +1742,6 @@ body {
         background-color: @impac-dashboard-info-text-background-color;
       }
     }
-
   }
 
   // parent div section for widgets to be housed.
@@ -1780,14 +1782,6 @@ body {
   font-size: 14px;
 }
 
-.dhb-create-modal .dashboard-form {
-
-  // Better aligns form labels with templates section label
-  .col-sm-2.control-label {
-    text-align: left;
-  }
-}
-
 .impac-widget-suggestion .modal-body {
   input,textarea {
     width: 100%;
@@ -1807,6 +1801,27 @@ body {
   .loader-style(@impac-dashboard-loading-spinner)
 }
 
+
+.analytics .dashboard-create {
+  .btn-create {
+    background-color: @impac-dashboard-create-button-color;
+  }
+}
+
+.modal.impac-dashboard-create {
+  h1 { font-size: 24px; }
+  .fa.fa-times {
+    float: right;
+    color: #ccc;
+    cursor: pointer;
+  }
+  .control-label { text-align: left; }
+  .modal-footer {
+    .loader {
+      .loader-style(@impac-dashboard-loading-spinner)
+    }
+  }
+}
 
 #module__dashboard-selector {
   a {
@@ -1871,13 +1886,14 @@ body {
           &:hover {
             background-color: @impac-widget-background-color;
           }
-          &.create {
-            background-color: @impac-dashboard-title-color;
-            color: @impac-dashboard-title-label-create-color;
-            height: 30px;
-            padding: 5px 10px 5px 10px;
-            &:hover {
-              background-color: darken(@impac-dashboard-title-color,10%);
+          &.dashboard-create {
+            height: 33px;
+            .btn {
+              float: none;
+              width: 100%;
+              text-align: left;
+              margin: 0px;
+              border-radius: 0px;
             }
           }
           i.fa.fa-pencil {
@@ -2644,17 +2660,6 @@ dashboard-templates-selector {
   .overlay, .title, .btn, .example { display: none; }
 }
 
-.analytics common-delete-widget {
-  .widget-popup();
-  .message {
-    .loader i.fa.fa-spinner {
-      font-size: 26px;
-    }
-    p { padding: 0px 10px; }
-    button.btn { margin-top: 20px; }
-  }
-}
-
 #transactions-add {
   .widget-popup();
   .message {
@@ -2742,6 +2747,17 @@ dashboard-templates-selector {
         background-color: lighten(#c76379, 20%);
       }
     }
+  }
+}
+
+.analytics common-delete-widget {
+  .widget-popup();
+  .message {
+    .loader i.fa.fa-spinner {
+      font-size: 26px;
+    }
+    p { padding: 0px 10px; }
+    button.btn { margin-top: 20px; }
   }
 }
 
@@ -3134,6 +3150,17 @@ dashboard-templates-selector {
   }
 }
 
+.analytics .widget-item .content.accounts-expense-weight {
+  .legend {
+    text-align: left;
+    max-height: 115px;
+
+    .title {
+      text-align: center;
+    }
+  }
+}
+
 .analytics .widget-item .content.accounts-detailed-classifications {
   .tall-widget();
   .widget-lines-container {
@@ -3156,17 +3183,6 @@ dashboard-templates-selector {
 }
 
 
-
-.analytics .widget-item .content.accounts-expense-weight {
-  .legend {
-    text-align: left;
-    max-height: 115px;
-
-    .title {
-      text-align: center;
-    }
-  }
-}
 
 .analytics .widget-item .content.accounts-expenses-revenue {
   .legend {
