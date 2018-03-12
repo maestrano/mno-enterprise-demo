@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/MAhsenArif/mno-enterprise
-  revision: 4f7bf4d49bc4393cc6a214b5aed723174d64f446
+  revision: 3fc4e0b4ec4a6ab86f30ab29f0ea62607f9196cc
   branch: 890
   specs:
     mno-enterprise (4.0.0.pre.dev)
