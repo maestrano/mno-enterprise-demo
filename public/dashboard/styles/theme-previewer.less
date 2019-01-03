@@ -1911,6 +1911,18 @@ mno-app-onboarding-btn {
   }
 }
 
+.dashboard-marketplace-app {
+  .show-header {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+  }
+
+  .alert.billing-info-alert.alert-danger {
+    margin-bottom: 0;
+  }
+}
+
 mno-audit-events-list {
   .table > thead > tr {
     color: @table-cell-header-text-color;
@@ -1980,6 +1992,18 @@ mno-loader {
   position: relative;
 }
 
+.dashboard-marketplace-product {
+  .show-header {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+  }
+
+  .alert.billing-info-alert.alert-danger {
+    margin-bottom: 0;
+  }
+}
+
 mno-pagination {
   display: block;
   overflow: auto;
@@ -2014,67 +2038,6 @@ mno-without-organisation {
     h2 {
       margin-top: 0;
     }
-  }
-}
-
-average-star-rating, star-rating {
-  position: relative;
-  display: block;
-
-  ul.rating {
-    margin: 0;
-    padding: 0 !important;
-    display: inline-block;
-
-    li {
-      padding: 1px;
-      color: #ddd;
-      font-size: 20px;
-      text-shadow: .05em .05em #aaa;
-      list-style-type: none;
-      display: inline-block;
-      cursor: pointer;
-      outline: none;
-
-      &.filled {
-        color: #fd0; //#21568b
-      }
-    }
-
-    &.readonly li.filled {
-      color: #666;
-    }
-  }
-
-  .average-rating-container {
-    display: inline-block;
-    position: relative;
-    height: 31px;
-    width: 103px;
-    overflow: hidden;
-
-    &.withrating {
-      margin-right: 37px;
-    }
-
-    .rating li {
-      cursor: inherit;
-    }
-
-    .background,
-    .foreground {
-      position: absolute;
-      top: 0;
-      left: 0;
-      overflow: hidden;
-      white-space: nowrap;
-    }
-  }
-
-  .badge {
-    position: absolute;
-    top: 5px;
-    right: 0;
   }
 }
 
@@ -2139,6 +2102,67 @@ theme-editor {
 
   .sp-dd {
     margin: 2px 2px 2px;
+  }
+}
+
+average-star-rating, star-rating {
+  position: relative;
+  display: block;
+
+  ul.rating {
+    margin: 0;
+    padding: 0 !important;
+    display: inline-block;
+
+    li {
+      padding: 1px;
+      color: #ddd;
+      font-size: 20px;
+      text-shadow: .05em .05em #aaa;
+      list-style-type: none;
+      display: inline-block;
+      cursor: pointer;
+      outline: none;
+
+      &.filled {
+        color: #fd0; //#21568b
+      }
+    }
+
+    &.readonly li.filled {
+      color: #666;
+    }
+  }
+
+  .average-rating-container {
+    display: inline-block;
+    position: relative;
+    height: 31px;
+    width: 103px;
+    overflow: hidden;
+
+    &.withrating {
+      margin-right: 37px;
+    }
+
+    .rating li {
+      cursor: inherit;
+    }
+
+    .background,
+    .foreground {
+      position: absolute;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  }
+
+  .badge {
+    position: absolute;
+    top: 5px;
+    right: 0;
   }
 }
 
@@ -3984,6 +4008,15 @@ form.editable-wrap .editable-controls input {
   [class*="mnoe-icon-cc-icons-mno-cc-"].enabled {
     opacity: 1;
   }
+
+  .panel-collapse > .panel-body .alert.alert-error ul > li {
+    .text-danger;
+    font-weight: bold;
+  }
+}
+
+.cc-confirm-header h4 {
+  font-weight: bold;
 }
 
 .settings-address {
@@ -4198,50 +4231,71 @@ form.editable-wrap .editable-controls input {
   font-style: normal;
 }
 
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
 
-.mnoe-icon {
-  background-image: url('../images/sprites/mnoe-sprites.png');
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
 }
 
+// HTML
+<i class="icon icon-home"></i>
+*/
 .mnoe-icon-cc-icons-mno-cc-amex {
-  background-position: -0px -0px;
+  background-image: url(../images/sprites/mnoe-sprites.png);
+  background-position: -175px -32px;
   width: 46px;
   height: 30px;
 }
 .mnoe-icon-cc-icons-mno-cc-jcb {
-  background-position: -0px -30px;
+  background-image: url(../images/sprites/mnoe-sprites.png);
+  background-position: -221px -32px;
   width: 46px;
   height: 30px;
 }
+.mnoe-icon-cc-icons-mno-cc-lock {
+  background-image: url(../images/sprites/mnoe-sprites.png);
+  background-position: -140px -32px;
+  width: 35px;
+  height: 46px;
+}
 .mnoe-icon-cc-icons-mno-cc-mastercard {
-  background-position: -0px -60px;
+  background-image: url(../images/sprites/mnoe-sprites.png);
+  background-position: -140px -78px;
   width: 46px;
   height: 30px;
 }
 .mnoe-icon-cc-icons-mno-cc-visa {
-  background-position: -0px -90px;
+  background-image: url(../images/sprites/mnoe-sprites.png);
+  background-position: -186px -78px;
   width: 46px;
   height: 30px;
 }
-.mnoe-icon-cpy-logo-siteseal {
-  background-position: -0px -120px;
-  width: 131px;
-  height: 32px;
-}
-.mnoe-icon-cc-icons-mno-cc-lock {
-  background-position: -0px -152px;
-  width: 35px;
-  height: 46px;
-}
 .mnoe-icon-cpy-logo-cba {
-  background-position: -0px -198px;
+  background-image: url(../images/sprites/mnoe-sprites.png);
+  background-position: 0px -70px;
   width: 94px;
   height: 70px;
 }
 .mnoe-icon-cpy-logo-eway {
-  background-position: -0px -268px;
+  background-image: url(../images/sprites/mnoe-sprites.png);
+  background-position: 0px 0px;
   width: 140px;
   height: 70px;
+}
+.mnoe-icon-cpy-logo-siteseal {
+  background-image: url(../images/sprites/mnoe-sprites.png);
+  background-position: -140px 0px;
+  width: 131px;
+  height: 32px;
 }
 
 // endinjector
