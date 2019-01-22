@@ -7,7 +7,7 @@ gem 'rails', '~> 4.2.6'
 
 # Maestrano Enterprise Engine
 # Bundle edge Mnoe instead:
-gem 'mno-enterprise', git: 'https://github.com/maestrano/mno-enterprise', branch: '4.0'
+gem 'mno-enterprise', github: 'ouranos/mno-enterprise', branch: 'feature/1288-invoices-access'
 
 # Use local mnoe
 # gem 'mno-enterprise', path: '../mno-enterprise'
